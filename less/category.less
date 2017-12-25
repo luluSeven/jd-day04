@@ -1,0 +1,129 @@
+@import "base.less";
+
+html,body{
+  height: 100%;
+}
+
+#layout{
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0px auto;
+  background-color: #ccc;
+}
+
+#topbar{
+  height: 40px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+  position: absolute;
+  width: 100%;
+  .icon-back{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-image: url('../images/sprites.png');
+    background-size: 200px 200px;
+    background-position: -20px 0;
+    position: absolute;
+    background-origin: content-box;
+    background-clip: content-box;
+    left: 0;
+    top: 0;
+  }
+  form{
+    margin-left: 40px;
+    margin-right: 40px;
+    input{
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+      padding-left: 15px;
+    }
+  }
+  .icon-menu{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-image: url(../images/sprites.png);
+    background-size: 200px 200px;
+    background-position: -60px 0;
+    background-origin: content-box;
+    background-clip: content-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+#category{
+  padding-top: 40px;
+  height: 100%;
+  .category-left{
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    >ul{
+      >li{
+        &.active{
+          >a{
+            background-color: #fff;
+            color: @main-color;
+          }
+        }
+        a{
+          width: 100px;
+          height: 50px;
+          display: block;
+          font-size: 14px;
+          line-height: 50px;
+          text-align: center;
+          background-color: #eee;
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+        }
+      }
+    }
+  }
+  
+  .category-right{
+    padding: 10px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    .product-list{
+      >a{
+        width: 100%;
+        display: block;
+        >img{
+          width: 100%;
+        }
+      }
+    }
+    .product{
+      >h4{
+        font-size: 16px;
+      }
+      >ul{
+        >li{
+          float: left;
+          width: 33.33%;
+          text-align: center;
+          >a{
+            display: block;
+            >img{
+              width: 50px;
+              height: 50px;
+            }
+            >p{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
